@@ -131,7 +131,7 @@ export default function Home() {
                 <Link href={'/'}>
                   <div className="flex items-center mb-4">
                     <div className=" ">
-                      <Image className='' src="/logo.webp" alt="MyPerfectHire Logo" width={150} height={50} />
+                      <Image className='' src="/logo.png" alt="MyPerfectHire Logo" width={150} height={50} />
                     </div>
                   </div>
                 </Link>
@@ -227,7 +227,7 @@ export default function Home() {
             </div>
 
             <div className="pt-8 border-t-2 border-yellow-300 mt-6 bg-[#4e124d] p-4 rounded-lg">
-              <p className="mb-4 text-white font-bold text-base">&copy; {new Date().getFullYear()} Perfect Hire. All rights reserved.</p>
+              <p className="mb-4 text-white font-bold text-base">&copy; {new Date().getFullYear()} MyPerfectHire. All rights reserved.</p>
               
             </div>
           </div>

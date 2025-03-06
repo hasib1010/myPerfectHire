@@ -24,7 +24,7 @@ export default function Header() {
                            
                                 <Link href={'/'}>
                                     <div className="flex items-center">
-                                        <Image  src="/logo.png" alt="MyPerfectHire Logo" width={500} height={50} />
+                                        <Image  src="/logo.png" alt="MyPerfectHire Logo" width={400} height={50} />
                                     </div>
                                 </Link>
                             
