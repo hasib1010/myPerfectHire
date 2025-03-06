@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
+import EnhancedProfileCard from './EnhancedProfileCard';
 
 export default function HeroSection() {
     const [showForm, setShowForm] = useState(false);
@@ -211,48 +212,11 @@ export default function HeroSection() {
                                 </motion.form>
                             )}
 
-                            <div className="flex items-center space-x-6 pt-4">
-                                <div className="flex -space-x-3">
-                                    {/* Law Firm Logo */}
-                                    <div className="w-8 h-8 rounded-full bg-white/90 flex items-center justify-center text-[#4e124d] text-xs font-bold border-2 border-white">
-                                        LLP
-                                    </div>
 
-                                    {/* Tech Company Logo */}
-                                    <div className="w-8 h-8 rounded-full bg-white/90 flex items-center justify-center border-2 border-white">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 text-[#38c7ef]">
-                                            <path fillRule="evenodd" d="M14.447 3.027a.75.75 0 01.527.92l-4.5 16.5a.75.75 0 01-1.448-.394l4.5-16.5a.75.75 0 01.921-.526zM16.72 6.22a.75.75 0 011.06 0l5.25 5.25a.75.75 0 010 1.06l-5.25 5.25a.75.75 0 11-1.06-1.06L21.44 12l-4.72-4.72a.75.75 0 010-1.06zm-9.44 0a.75.75 0 010 1.06L2.56 12l4.72 4.72a.75.75 0 11-1.06 1.06L.97 12.53a.75.75 0 010-1.06l5.25-5.25a.75.75 0 011.06 0z" clipRule="evenodd" />
-                                        </svg>
-                                    </div>
-
-                                    {/* Finance Company Logo */}
-                                    <div className="w-8 h-8 rounded-full bg-white/90 flex items-center justify-center text-[#e61c5c] text-xs font-bold border-2 border-white">
-                                        FC
-                                    </div>
-
-                                    {/* Healthcare Logo */}
-                                    <div className="w-8 h-8 rounded-full bg-white/90 flex items-center justify-center border-2 border-white">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 text-[#2bb87c]">
-                                            <path d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z" />
-                                        </svg>
-                                    </div>
-
-                                    {/* Manufacturing Logo */}
-                                    <div className="w-8 h-8 rounded-full bg-white/90 flex items-center justify-center border-2 border-white">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 text-[#ecb324]">
-                                            <path d="M11.584 2.376a.75.75 0 01.832 0l9 6a.75.75 0 11-.832 1.248L12 3.901 3.416 9.624a.75.75 0 01-.832-1.248l9-6z" />
-                                            <path fillRule="evenodd" d="M20.25 10.332v9.918H21a.75.75 0 010 1.5H3a.75.75 0 010-1.5h.75v-9.918a.75.75 0 01.634-.74A49.109 49.109 0 0112 9c2.59 0 5.134.202 7.616.592a.75.75 0 01.634.74zm-7.5 2.418a.75.75 0 00-1.5 0v6.75a.75.75 0 001.5 0v-6.75zm3-.75a.75.75 0 01.75.75v6.75a.75.75 0 01-1.5 0v-6.75a.75.75 0 01.75-.75zM9 12.75a.75.75 0 00-1.5 0v6.75a.75.75 0 001.5 0v-6.75z" clipRule="evenodd" />
-                                        </svg>
-                                    </div>
-                                </div>
-                                <p className="text-sm text-white opacity-80">
-                                    Trusted by over 500 companies across industries
-                                </p>
-                            </div>
                         </motion.div>
                     </div>
 
-                    {/* Right Content - Abstract Graphics */}
+                    {/* Right Content - Hero Image with Professional Profile */}
                     <div className="relative hidden lg:block">
                         <div className="absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full">
                             <motion.div
@@ -322,78 +286,7 @@ export default function HeroSection() {
                             </motion.div>
                         </div>
 
-                        {/* Candidate Matching Visualization */}
-                        <motion.div
-                            className="relative z-10 bg-blue-800/10 backdrop-blur-3xl  rounded-xl p-6 shadow-xl border border-white/20"
-                            initial={{ opacity: 0, y: 30 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.7, delay: 0.3 }}
-                        >
-                            <div className="p-4 bg-white/10 rounded-lg mb-4 border border-white/20">
-                                <h4 className="text-white font-medium mb-2">Perfect Match™ Technology</h4>
-                                <div className="flex items-center justify-between">
-                                    <div className="text-xs text-white/70">Match Score</div>
-                                    <div className="text-xs text-white/70">Expertise</div>
-                                </div>
-                            </div>
-
-                            {/* Candidate Cards */}
-                            <div className="space-y-4">
-                                {/* Top Candidate */}
-                                <div className="p-4 bg-white/10 rounded-lg border border-[#ecb324]/40 relative overflow-hidden">
-                                    <div className="absolute top-0 right-0 bg-[#ecb324] text-white text-xs px-2 py-1 rounded-bl-md">
-                                        98% Match
-                                    </div>
-                                    <div className="flex items-center">
-                                        <div className="w-10 h-10 rounded-full bg-[#e61c5c]/30 flex items-center justify-center text-white font-medium">JD</div>
-                                        <div className="ml-3">
-                                            <div className="text-white font-medium">Janet Davis</div>
-                                            <div className="text-white/70 text-sm">Senior Legal Counsel</div>
-                                        </div>
-                                    </div>
-                                    <div className="mt-3 grid grid-cols-3 gap-2">
-                                        <div className="bg-white/10 rounded px-2 py-1 text-xs text-white/90">IP Law</div>
-                                        <div className="bg-white/10 rounded px-2 py-1 text-xs text-white/90">Negotiations</div>
-                                        <div className="bg-white/10 rounded px-2 py-1 text-xs text-white/90">Corporate</div>
-                                    </div>
-                                </div>
-
-                                {/* Second Candidate */}
-                                <div className="p-4 bg-white/10 rounded-lg border border-white/20 relative overflow-hidden">
-                                    <div className="absolute top-0 right-0 bg-[#38c7ef] text-white text-xs px-2 py-1 rounded-bl-md">
-                                        94% Match
-                                    </div>
-                                    <div className="flex items-center">
-                                        <div className="w-10 h-10 rounded-full bg-[#38c7ef]/30 flex items-center justify-center text-white font-medium">MR</div>
-                                        <div className="ml-3">
-                                            <div className="text-white font-medium">Michael Rodriguez</div>
-                                            <div className="text-white/70 text-sm">Contract Attorney</div>
-                                        </div>
-                                    </div>
-                                    <div className="mt-3 grid grid-cols-3 gap-2">
-                                        <div className="bg-white/10 rounded px-2 py-1 text-xs text-white/90">Contracts</div>
-                                        <div className="bg-white/10 rounded px-2 py-1 text-xs text-white/90">Compliance</div>
-                                        <div className="bg-white/10 rounded px-2 py-1 text-xs text-white/90">Finance</div>
-                                    </div>
-                                </div>
-
-                                {/* Metrics at bottom */}
-                                <div className="grid grid-cols-3 gap-3 pt-2">
-                                    <div className="bg-white/10 rounded-lg p-2 text-center">
-                                        <div className="text-[#ecb324] text-xl font-bold">42</div>
-                                        <div className="text-white/70 text-xs">Candidates</div>
-                                    </div>
-                                    <div className="bg-white/10 rounded-lg p-2 text-center">
-                                        <div className="text-[#e61c5c] text-xl font-bold">24h</div>
-                                        <div className="text-white/70 text-xs">Avg. Time</div>
-                                    </div>
-                                    <div className="bg-white/10 rounded-lg p-2 text-center">
-                                        <div className="text-[#2bb87c] text-xl font-bold">98%</div>
-                                        <div className="text-white/70 text-xs">Success</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </motion.div>
+                        <EnhancedProfileCard/>
                     </div>
                 </div>
             </div>

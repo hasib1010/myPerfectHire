@@ -19,33 +19,13 @@ export default function AboutSection() {
 
   // Stats data
   const stats = [
-    { number: "500+", label: "Companies Served", color: "bg-[#e61c5c]" },
+    { number: " 5%", label: "Access to the top Elite Talent.", color: "bg-[#e61c5c]" },
     { number: "98%", label: "Client Satisfaction", color: "bg-[#38c7ef]" },
     { number: "5,000+", label: "Candidates Placed", color: "bg-[#2bb87c]" },
     { number: "15+", label: "Years Experience", color: "bg-[#ecb324]" }
   ];
 
-  // Team members data
-  const team = [
-    {
-      name: "Jessica Parker",
-      role: "Founder & CEO",
-      bio: "Former executive recruiter with 15+ years of experience placing top talent at Fortune 500 companies.",
-      image: "https://img.freepik.com/free-photo/woman-with-long-black-hair-green-wall-from-leafes_613910-253.jpg?t=st=1741135214~exp=1741138814~hmac=c097017007850f97cd49bb058146d4eae8ad3573d65d6c563a076db66ea74b90&w=1060" 
-    },
-    {
-      name: "Michael Rodriguez",
-      role: "Head of Legal Recruiting",
-      bio: "Former attorney with specialized expertise in matching legal professionals with the right organizational culture.",
-      image: "https://img.freepik.com/free-photo/portrait-young-charismatic-gay-man-with-curly-hair-turn-head-camera-looking-optimistic-white-background_176420-49449.jpg?t=st=1741135030~exp=1741138630~hmac=b8b9fddf8972b2388c2bfe7ee8527d67abc2b3188734a38c4b8d2b557ccefff8&w=1060" 
-    },
-    {
-      name: "Sarah Johnson",
-      role: "Technical Recruiting Director",
-      bio: "Tech industry veteran who understands the unique needs of startups and established tech companies alike.",
-      image: "https://img.freepik.com/free-photo/pretty-self-confident-millennial-girl-wears-pink-shirt-knitted-vest-headband-looks-directly-camera-has-walk-outside-spare-time-poses-outside_273609-55310.jpg?t=st=1741135113~exp=1741138713~hmac=cc970c023d5e1cfb09611d46bef0e98417051687edf32ca7084fac09c657caf1&w=1060"  
-    }
-  ];
+  
 
   return (
     <section id="about" className="py-20 bg-white">
@@ -61,7 +41,7 @@ export default function AboutSection() {
             animate={titleInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.5 }}
           >
-            About Perfect Hire
+            About MyPerfectHire.com
           </motion.h2>
           <motion.p 
             className="text-lg text-gray-600 max-w-3xl mx-auto"
@@ -98,7 +78,7 @@ export default function AboutSection() {
           >
             <h3 className="text-2xl font-semibold text-gray-800">Our Mission</h3>
             <p className="text-gray-600">
-              At Perfect Hire, we believe that the right talent can transform an organization. Our mission is to connect exceptional professionals with companies where they can thrive and make a meaningful impact.
+              At MyPerfectHire.com, we believe that the right talent can transform an organization. Our mission is to connect exceptional professionals with companies where they can thrive and make a meaningful impact.
             </p>
             
             <h3 className="text-2xl font-semibold text-gray-800 pt-2">Our Approach</h3>
@@ -114,7 +94,7 @@ export default function AboutSection() {
         </div>
 
         {/* Stats Section */}
-        <div 
+        {/* <div 
           ref={statsRef}
           className="mb-20"
         >
@@ -138,45 +118,9 @@ export default function AboutSection() {
               </motion.div>
             ))}
           </motion.div>
-        </div>
+        </div> */}
 
-        {/* Team Section */}
-        <div ref={teamRef}>
-          <motion.h3 
-            className="text-2xl font-bold text-center text-[#4e124d] mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            animate={teamInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-            transition={{ duration: 0.5 }}
-          >
-            Meet Our Leadership Team
-          </motion.h3>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {team.map((member, index) => (
-              <motion.div
-                key={index}
-                className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow"
-                initial={{ opacity: 0, y: 30 }}
-                animate={teamInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-                transition={{ duration: 0.5, delay: index * 0.2 }}
-              >
-                <div className="relative h-64 w-full">
-                  <Image
-                    src={member.image}
-                    alt={member.name}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="p-6">
-                  <h4 className="text-xl font-semibold text-gray-800">{member.name}</h4>
-                  <p className="text-[#4e124d] font-medium mb-3">{member.role}</p>
-                  <p className="text-gray-600">{member.bio}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
+        
       </div>
     </section>
   );
