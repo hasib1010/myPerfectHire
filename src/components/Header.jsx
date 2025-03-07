@@ -1,81 +1,75 @@
 "use client";
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import Image from 'next/image';
 
 export default function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
-    
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
     };
 
     return (
-        <header className={`fixed w-full z-50 transition-all pt-2.5  duration-300  bg-[#4e124d] text-white py-4"
-            }`}>
+        <header className="fixed w-full z-50 bg-[#4e124d] text-white py-2 sm:py-3">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center">
-                    {/* Logo */}
-                    <div className="flex p-2 items-center space-x-4">
-                        <div className="font-bold text-xl sm:text-2xl">
-                           
-                                <Link href={'/'}>
-                                    <div className="flex items-center">
-                                        <Image  src="/logo.png" alt="MyPerfectHire Logo" width={400} height={50} />
-                                    </div>
-                                </Link>
-                            
-                        </div>
+                    {/* Logo - enhanced responsive scaling */}
+                    <div className="flex items-center">
+                        <Link href={'/'}>
+                            <div className="flex items-center">
+                                <Image 
+                                    src="/logo.png" 
+                                    alt="MyPerfectHire Logo" 
+                                    width={400} 
+                                    height={50}
+                                    className="w-[200px] xxs:w-[150px] xs:w-[180px] sm:w-[250px] md:w-[300px] lg:w-[400px] h-auto" 
+                                    priority
+                                />
+                            </div>
+                        </Link>
                     </div>
 
-                    {/* Desktop Navigation */}
-                    <nav className="hidden md:flex items-center space-x-8">
+                    {/* Desktop Navigation - adjusted breakpoint and spacing */}
+                    <nav className="hidden lg:flex items-center space-x-4 xl:space-x-8">
                         <a
                             href="#services"
-                            className={`font-medium hover:opacity-80 transition-opacity   "text-white"
-                                }`}
+                            className="text-sm xl:text-base font-medium hover:opacity-80 transition-opacity"
                         >
                             Services
                         </a>
                         <a
                             href="#how-it-works"
-                            className={`font-medium hover:opacity-80 transition-opacity  "text-white"
-                                }`}
+                            className="text-sm xl:text-base font-medium hover:opacity-80 transition-opacity"
                         >
                             How It Works
                         </a>
                         <a
                             href="#about"
-                            className={`font-medium hover:opacity-80 transition-opacity   "text-white"
-                                }`}
+                            className="text-sm xl:text-base font-medium hover:opacity-80 transition-opacity"
                         >
                             About Us
                         </a>
-                        <a className='cursor-pointer' href="#contact">
+                        <a href="#contact">
                             <Button
-                                className={`w-full cursor-pointer justify-center rounded-full px-6 py-2 font-medium  
-                                    "bg-white text-white hover:bg-gray-100"
-                                    }`}
+                                className="rounded-full px-4 py-1.5 xl:px-6 xl:py-2 text-sm xl:text-base font-medium bg-white text-[#4e124d] hover:bg-gray-100"
                             >
-
-
                                 Contact Us
                             </Button>
                         </a>
                     </nav>
 
-                    {/* Mobile Menu Button */}
+                    {/* Mobile Menu Button - adjusted size */}
                     <button
-                        className="md:hidden"
+                        className="lg:hidden p-2"
                         onClick={toggleMenu}
                         aria-label="Toggle menu"
                     >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            className={`h-6 w-6  "text-white"}`}
+                            className="h-5 w-5 sm:h-6 sm:w-6"
                             fill="none"
                             viewBox="0 0 24 24"
                             stroke="currentColor"
@@ -89,42 +83,38 @@ export default function Header() {
                     </button>
                 </div>
 
-                {/* Mobile Menu */}
+                {/* Mobile Menu - improved spacing and sizing */}
                 {menuOpen && (
-                    <div className="md:hidden mt-4 py-4 border-t border-gray-200 dark:border-gray-700">
-                        <nav className="flex flex-col space-y-4">
+                    <div className="lg:hidden mt-3 py-4 border-t border-gray-200">
+                        <nav className="flex flex-col space-y-3 px-2">
                             <a
                                 href="#services"
-                                className={`py-2 font-medium   "text-white"}`}
+                                className="py-2 text-sm sm:text-base font-medium hover:opacity-80 transition-opacity"
                                 onClick={() => setMenuOpen(false)}
                             >
                                 Services
                             </a>
                             <a
                                 href="#how-it-works"
-                                className={`py-2 font-medium   "text-white"}`}
+                                className="py-2 text-sm sm:text-base font-medium hover:opacity-80 transition-opacity"
                                 onClick={() => setMenuOpen(false)}
                             >
                                 How It Works
                             </a>
                             <a
                                 href="#about"
-                                className={`py-2 font-medium  "text-white"}`}
+                                className="py-2 text-sm sm:text-base font-medium hover:opacity-80 transition-opacity"
                                 onClick={() => setMenuOpen(false)}
                             >
                                 About Us
                             </a>
-                            <a className='cursor-pointer' href="#contact">
-                            <Button
-                                className={`w-full cursor-pointer justify-center rounded-full px-6 py-2 font-medium  
-                                    "bg-white text-white hover:bg-gray-100"
-                                    }`}
-                            >
-
-
-                                Contact Us
-                            </Button>
-                        </a>
+                            <a href="#contact" onClick={() => setMenuOpen(false)}>
+                                <Button
+                                    className="w-full rounded-full px-6 py-2 text-sm sm:text-base font-medium bg-white text-[#4e124d] hover:bg-gray-100"
+                                >
+                                    Contact Us
+                                </Button>
+                            </a>
                         </nav>
                     </div>
                 )}

@@ -42,8 +42,8 @@ export default function HeroSection() {
 
     return (
         <section id='hero' className="pt-28 pb-20 lg:pt-36 lg:pb-32 bg-[#4e124d] overflow-hidden">
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 ">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8   ">
                     {/* Left Content */}
                     <div className="text-white max-w-2xl mx-auto lg:mx-0">
                         <motion.h1
@@ -217,7 +217,7 @@ export default function HeroSection() {
                     </div>
 
                     {/* Right Content - Hero Image with Professional Profile */}
-                    <div className="relative hidden lg:block">
+                    <div className="relative  min-h-96">
                         <div className="absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full">
                             <motion.div
                                 className="relative"

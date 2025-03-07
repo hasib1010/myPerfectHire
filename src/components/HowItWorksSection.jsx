@@ -98,25 +98,8 @@ interviews.
   const ctaInView = useInView(ctaRef, { once: true, amount: 0.5 });
 
   return (
-    <section id="how-it-works" className="py-20 bg-gray-50 relative overflow-hidden">
-      {/* Background Color Particles */}
-      {/* {particles.map((particle, index) => (
-        <motion.div
-          key={index}
-          className={`absolute ${particle.size} ${particle.color} rounded-full blur-3xl ${particle.top || ''} ${particle.left || ''} ${particle.right || ''} ${particle.bottom || ''} z-0`}
-          animate={{
-            y: [20, -20, 20],
-            x: [10, -10, 10],
-            scale: [1, 1.05, 1],
-            rotate: [0, particle.animDuration % 2 === 0 ? 5 : -5, 0]
-          }}
-          transition={{
-            duration: particle.animDuration,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-      ))} */}
+    <section id="how-it-works" className="  bg-gray-50 relative overflow-hidden">
+     
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div
@@ -205,7 +188,7 @@ interviews.
           {/* Call to Action */}
           <div
             ref={ctaRef}
-            className="text-center mt-12"
+            className="text-center my-12"
           >
             <motion.a
               href="#hero"

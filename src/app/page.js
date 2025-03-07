@@ -53,39 +53,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen relative">
-      {/* Fixed background elements - combined for better performance */}
-      <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-20 -right-20 w-64 h-64 bg-[#e61c5c]/3 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/3 -left-32 w-96 h-96 bg-[#38c7ef]/3 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/4 -right-20 w-80 h-80 bg-[#2bb87c]/3 rounded-full blur-3xl"></div>
-      </div>
-
-      {/* Reduced number of floating elements */}
-      <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
-        {BRAND_COLORS.slice(0, 3).map((color, index) => (
-          <motion.div
-            key={index}
-            className="absolute rounded-full opacity-5"
-            style={{
-              backgroundColor: color,
-              width: `${Math.random() * 10 + 5}rem`,
-              height: `${Math.random() * 10 + 5}rem`,
-              top: `${Math.random() * 100}%`,
-              left: `${Math.random() * 100}%`,
-            }}
-            animate={{
-              y: [0, -20, 0],
-              x: [0, 10, 0],
-            }}
-            transition={{
-              duration: 20,
-              repeat: Infinity,
-              ease: "easeInOut",
-              delay: index * 2,
-            }}
-          />
-        ))}
-      </div>
+       
 
       {/* Main content */}
       <div className="relative z-10">
@@ -94,11 +62,10 @@ export default function Home() {
         <main>
           <HeroSection />
 
-          <Suspense fallback={<div className="h-64 flex items-center justify-center">Loading services...</div>}>
+       
             <div className="relative">
               <ServicesSection />
-            </div>
-          </Suspense>
+            </div> 
 
           <Suspense fallback={<div className="h-64 flex items-center justify-center">Loading process...</div>}>
             <HowItWorksSection />
@@ -152,7 +119,7 @@ export default function Home() {
                   <li>
                     <a href="#services" className="text-white font-bold text-lg hover:text-white transition-all duration-200 flex items-center group">
                       <span className="mr-2 bg-white text-[#4e124d] rounded-full w-5 h-5 flex items-center justify-center text-sm group-hover:bg-[#e61c5c] group-hover:text-white transition-colors">→</span>
-                      Retained Search Recruiting
+                      Retained Executive Search
                     </a>
                   </li>
                   <li>
@@ -231,31 +198,13 @@ export default function Home() {
               
             </div>
           </div>
-
-          {/* No light beam effect to avoid visibility issues */}
+ 
         </footer>
 
 
       </div>
 
-      {/* Optimized scroll to top button */}
-      <AnimatePresence>
-        {isVisible && (
-          <motion.button
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 20 }}
-            onClick={scrollToTop}
-            className="fixed bottom-6 right-6 p-3 rounded-full bg-[#4e124d] text-white shadow-lg z-50 hover:bg-[#3d0e3d] transition-colors"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
-            </svg>
-          </motion.button>
-        )}
-      </AnimatePresence>
+      
     </div>
   );
 }
