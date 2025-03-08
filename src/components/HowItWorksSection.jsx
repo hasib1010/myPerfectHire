@@ -10,7 +10,7 @@ export default function HowItWorksSection() {
     { base: "#38c7ef", bg: "bg-[#38c7ef]/10", text: "text-[#38c7ef]", border: "border-[#38c7ef]/30" },
     { base: "#2bb87c", bg: "bg-[#2bb87c]/10", text: "text-[#2bb87c]", border: "border-[#2bb87c]/30" },
     { base: "#ecb324", bg: "bg-[#ecb324]/10", text: "text-[#ecb324]", border: "border-[#ecb324]/30" },
-    // { base: "#4e124d", bg: "bg-[#4e124d]/10", text: "text-[#4e124d]", border: "border-[#4e124d]/30" }
+    // { base: "#481A54", bg: "bg-[#481A54]/10", text: "text-[#481A54]", border: "border-[#481A54]/30" }
   ];
 
   // State to track current color index for each card
@@ -84,7 +84,7 @@ interviews.
     { color: "bg-[#38c7ef]/20", size: "w-72 h-72", top: "top-1/4", right: "right-[10%]", animDuration: 30 },
     { color: "bg-[#2bb87c]/20", size: "w-56 h-56", top: "top-1/2", left: "left-[15%]", animDuration: 20 },
     { color: "bg-[#ecb324]/20", size: "w-80 h-80", bottom: "bottom-[20%]", right: "right-[5%]", animDuration: 28 },
-    { color: "bg-[#4e124d]/20", size: "w-60 h-60", bottom: "bottom-10", left: "left-[20%]", animDuration: 22 }
+    { color: "bg-[#481A54]/20", size: "w-60 h-60", bottom: "bottom-10", left: "left-[20%]", animDuration: 22 }
   ];
 
   // Create refs for elements we want to observe
@@ -107,7 +107,7 @@ interviews.
           className="text-center mb-16"
         >
           <motion.h2
-            className="text-3xl sm:text-4xl font-bold text-[#4e124d] mb-4"
+            className="text-3xl sm:text-4xl font-bold text-[#481A54] mb-4"
             initial={{ opacity: 0, y: 20 }}
             animate={titleInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.5 }}
@@ -192,7 +192,7 @@ interviews.
           >
             <motion.a
               href="#hero"
-              className="inline-block px-8 py-3 bg-[#4e124d] text-white font-medium rounded-lg hover:bg-[#3d0e3d] hover:scale-105 active:scale-95 transition-all duration-200 shadow-md"
+              className="inline-block px-8 py-3 bg-[#481A54] text-white font-medium rounded-lg hover:bg-[#3d0e3d] hover:scale-105 active:scale-95 transition-all duration-200 shadow-md"
               initial={{ opacity: 0, y: 20 }}
               animate={ctaInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.5 }}

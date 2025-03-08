@@ -166,7 +166,7 @@ body {
     --popover: 0 0% 100%;
     --popover-foreground: 224 71.4% 4.1%;
     --primary: 301 65% 19%;
-    /* #4e124d */
+    /* #481A54 */
     --primary-foreground: 210 20% 98%;
     --secondary: 196 83% 58%;
     /* #38c7ef */
@@ -191,7 +191,7 @@ body {
 }
  
 .slack-gradient {
-  background: linear-gradient(to bottom right, #4e124d, #611f5e, #751f71);
+  background: linear-gradient(to bottom right, #481A54, #611f5e, #751f71);
 }
 
 /* Custom scroll behavior */

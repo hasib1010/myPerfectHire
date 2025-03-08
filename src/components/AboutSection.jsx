@@ -27,7 +27,7 @@ export default function AboutSection() {
         {/* Section Title */}
         <div ref={titleRef} className="text-center mb-12 sm:mb-16">
           <motion.h2 
-            className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#4e124d] mb-4"
+            className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#481A54] mb-4"
             initial={{ opacity: 0, y: 50 }}
             animate={titleInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
@@ -63,7 +63,7 @@ export default function AboutSection() {
               src="https://img.freepik.com/free-photo/group-people-working-out-business-plan-office_1303-15773.jpg?t=st=1741136145~exp=1741139745~hmac=eb258883c18010e44f618d8f4b6d98d0325bbf7181cc65ceb595d80c5716cccf&w=1060"
               alt="Team working together"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#4e124d]/60 to-transparent mix-blend-multiply"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-[#481A54]/60 to-transparent mix-blend-multiply"></div>
           </motion.div>
 
           {/* Text Content */}

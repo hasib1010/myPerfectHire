@@ -13,7 +13,7 @@ export default function Header() {
     };
 
     return (
-        <header className="fixed w-full z-50 bg-[#4e124d] text-white py-2 sm:py-3">
+        <header className="fixed w-full z-50 bg-[#481A54] text-white py-2 sm:py-3">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center">
                     {/* Logo - enhanced responsive scaling */}
@@ -54,7 +54,7 @@ export default function Header() {
                         </a>
                         <a href="#contact">
                             <Button
-                                className="rounded-full px-4 py-1.5 xl:px-6 xl:py-2 text-sm xl:text-base font-medium bg-white text-[#4e124d] hover:bg-gray-100"
+                                className="rounded-full px-4 py-1.5 xl:px-6 xl:py-2 text-sm xl:text-base font-medium bg-white text-[#481A54] hover:bg-gray-100"
                             >
                                 Contact Us
                             </Button>
@@ -110,7 +110,7 @@ export default function Header() {
                             </a>
                             <a href="#contact" onClick={() => setMenuOpen(false)}>
                                 <Button
-                                    className="w-full rounded-full px-6 py-2 text-sm sm:text-base font-medium bg-white text-[#4e124d] hover:bg-gray-100"
+                                    className="w-full rounded-full px-6 py-2 text-sm sm:text-base font-medium bg-white text-[#481A54] hover:bg-gray-100"
                                 >
                                     Contact Us
                                 </Button>

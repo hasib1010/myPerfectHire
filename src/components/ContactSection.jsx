@@ -29,7 +29,7 @@ export default function ContactSection() {
         {/* Section Title */}
         <div ref={titleRef} className="text-center mb-12 sm:mb-16">
           <motion.h2
-            className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#4e124d] mb-4"
+            className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#481A54] mb-4"
             initial={{ opacity: 0, y: 50 }}
             animate={titleInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
@@ -55,7 +55,7 @@ export default function ContactSection() {
             animate={formInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
-            <h3 className="text-xl sm:text-2xl font-semibold text-[#4e124d] mb-6">
+            <h3 className="text-xl sm:text-2xl font-semibold text-[#481A54] mb-6">
               Send Us a Message
             </h3>
 
@@ -139,7 +139,7 @@ export default function ContactSection() {
 
               <Button
                 type="submit"
-                className="w-full bg-[#4e124d] hover:bg-[#3d0e3d] text-white font-medium py-2 sm:py-3"
+                className="w-full bg-[#481A54] hover:bg-[#3d0e3d] text-white font-medium py-2 sm:py-3"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >

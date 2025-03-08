@@ -41,7 +41,7 @@ export default function HeroSection() {
     };
 
     return (
-        <section id='hero' className="pt-28 pb-20 lg:pt-36 lg:pb-32 bg-[#4e124d] overflow-hidden">
+        <section id='hero' className="pt-28 pb-20 lg:pt-36 lg:pb-32 bg-[#481A54] overflow-hidden">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 ">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8   ">
                     {/* Left Content */}
@@ -74,9 +74,9 @@ export default function HeroSection() {
                                 <div className="space-y-4">
                                     <Button
                                         onClick={handleStartClick}
-                                        className="bg-white text-[#4e124d] hover:bg-gray-100 text-lg px-8 py-6 rounded-lg shadow-lg"
+                                        className="bg-white text-[#481A54] hover:bg-gray-100 text-lg px-8 py-6 rounded-lg shadow-lg"
                                     >
-                                        Find Your Perfect Hire →
+                                        Find My Perfect Hire →
                                     </Button>
 
                                     <p className="text-sm opacity-80 pt-2">
@@ -91,7 +91,7 @@ export default function HeroSection() {
                                     animate={{ opacity: 1, scale: 1 }}
                                     transition={{ duration: 0.3 }}
                                 >
-                                    <h3 className="text-[#4e124d] font-semibold text-xl mb-4">
+                                    <h3 className="text-[#481A54] font-semibold text-xl mb-4">
                                         Tell us About Your Perfect Hire:
                                     </h3>
 
@@ -132,7 +132,7 @@ export default function HeroSection() {
                                             />
                                         </div>
 
-                                        <h4 className="text-[#4e124d] font-semibold pt-2">Your Contact Information:</h4>
+                                        <h4 className="text-[#481A54] font-semibold pt-2">Your Contact Information:</h4>
 
                                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                             <div>
@@ -200,7 +200,7 @@ export default function HeroSection() {
 
                                         <Button
                                             type="submit"
-                                            className="w-full bg-[#4e124d] hover:bg-[#3d0e3d] text-white mt-2"
+                                            className="w-full bg-[#481A54] hover:bg-[#3d0e3d] text-white mt-2"
                                         >
                                             Submit
                                         </Button>

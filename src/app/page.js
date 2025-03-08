@@ -14,7 +14,7 @@ const HowItWorksSection = lazy(() => import("@/components/HowItWorksSection"));
 const ServicesSection = lazy(() => import("@/components/ServicesSection"));
 
 // Pre-defined colors to avoid recreation
-const BRAND_COLORS = ['#4e124d', '#e61c5c', '#38c7ef', '#2bb87c', '#ecb324'];
+const BRAND_COLORS = ['#481A54', '#e61c5c', '#38c7ef', '#2bb87c', '#ecb324'];
 
 export default function Home() {
   const [currentColorIndex, setCurrentColorIndex] = useState(0);
@@ -94,7 +94,7 @@ export default function Home() {
 
           <div className="container mx-auto px-6 relative z-20">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-10 text-left">
-              <div className="bg-[#4e124d] p-4 rounded-lg">
+              <div className="bg-[#481A54] p-4 rounded-lg">
                 <Link href={'/'}>
                   <div className="flex items-center mb-4">
                     <div className=" ">
@@ -107,61 +107,61 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="bg-[#4e124d] p-4 rounded-lg">
+              <div className="bg-[#481A54] p-4 rounded-lg">
                 <h4 className="font-extrabold text-xl mb-4 text-white">Services</h4>
                 <ul className="space-y-3">
                   <li>
                     <a href="#services" className="text-white font-bold text-lg hover:text-white transition-all duration-200 flex items-center group">
-                      <span className="mr-2 bg-white text-[#4e124d] rounded-full w-5 h-5 flex items-center justify-center text-sm group-hover:bg-[#e61c5c] group-hover:text-white transition-colors">→</span>
+                      <span className="mr-2 bg-white text-[#481A54] rounded-full w-5 h-5 flex items-center justify-center text-sm group-hover:bg-[#e61c5c] group-hover:text-white transition-colors">→</span>
                       Legal Recruiting
                     </a>
                   </li>
                   <li>
                     <a href="#services" className="text-white font-bold text-lg hover:text-white transition-all duration-200 flex items-center group">
-                      <span className="mr-2 bg-white text-[#4e124d] rounded-full w-5 h-5 flex items-center justify-center text-sm group-hover:bg-[#e61c5c] group-hover:text-white transition-colors">→</span>
+                      <span className="mr-2 bg-white text-[#481A54] rounded-full w-5 h-5 flex items-center justify-center text-sm group-hover:bg-[#e61c5c] group-hover:text-white transition-colors">→</span>
                       Retained Executive Search
                     </a>
                   </li>
                   <li>
                     <a href="#services" className="text-white font-bold text-lg hover:text-white transition-all duration-200 flex items-center group">
-                      <span className="mr-2 bg-white text-[#4e124d] rounded-full w-5 h-5 flex items-center justify-center text-sm group-hover:bg-[#e61c5c] group-hover:text-white transition-colors">→</span>
+                      <span className="mr-2 bg-white text-[#481A54] rounded-full w-5 h-5 flex items-center justify-center text-sm group-hover:bg-[#e61c5c] group-hover:text-white transition-colors">→</span>
                       Accounting & Finance Recruiting
                     </a>
                   </li>
                   <li>
                     <a href="#services" className="text-white font-bold text-lg hover:text-white transition-all duration-200 flex items-center group">
-                      <span className="mr-2 bg-white text-[#4e124d] rounded-full w-5 h-5 flex items-center justify-center text-sm group-hover:bg-[#e61c5c] group-hover:text-white transition-colors">→</span>
+                      <span className="mr-2 bg-white text-[#481A54] rounded-full w-5 h-5 flex items-center justify-center text-sm group-hover:bg-[#e61c5c] group-hover:text-white transition-colors">→</span>
                       Supply Chain and Logistics Recruiting
                     </a>
                   </li>
                 </ul>
               </div>
 
-              <div className="bg-[#4e124d] p-4 rounded-lg">
+              <div className="bg-[#481A54] p-4 rounded-lg">
                 <h4 className="font-extrabold text-xl mb-4 text-white">Company</h4>
                 <ul className="space-y-3">
                   <li>
                     <a href="#about" className="text-white font-bold text-lg hover:text-white transition-all duration-200 flex items-center group">
-                      <span className="mr-2 bg-white text-[#4e124d] rounded-full w-5 h-5 flex items-center justify-center text-sm group-hover:bg-[#e61c5c] group-hover:text-white transition-colors">→</span>
+                      <span className="mr-2 bg-white text-[#481A54] rounded-full w-5 h-5 flex items-center justify-center text-sm group-hover:bg-[#e61c5c] group-hover:text-white transition-colors">→</span>
                       About Us
                     </a>
                   </li>
                   <li>
                     <a href="#how-it-works" className="text-white font-bold text-lg hover:text-white transition-all duration-200 flex items-center group">
-                      <span className="mr-2 bg-white text-[#4e124d] rounded-full w-5 h-5 flex items-center justify-center text-sm group-hover:bg-[#e61c5c] group-hover:text-white transition-colors">→</span>
+                      <span className="mr-2 bg-white text-[#481A54] rounded-full w-5 h-5 flex items-center justify-center text-sm group-hover:bg-[#e61c5c] group-hover:text-white transition-colors">→</span>
                       How It Works
                     </a>
                   </li>
                   <li>
                     <a href="#contact" className="text-white font-bold text-lg hover:text-white transition-all duration-200 flex items-center group">
-                      <span className="mr-2 bg-white text-[#4e124d] rounded-full w-5 h-5 flex items-center justify-center text-sm group-hover:bg-[#e61c5c] group-hover:text-white transition-colors">→</span>
+                      <span className="mr-2 bg-white text-[#481A54] rounded-full w-5 h-5 flex items-center justify-center text-sm group-hover:bg-[#e61c5c] group-hover:text-white transition-colors">→</span>
                       Contact
                     </a>
                   </li>
                 </ul>
               </div>
 
-              <div className="bg-[#4e124d] p-4 rounded-lg">
+              <div className="bg-[#481A54] p-4 rounded-lg">
                 <h4 className="font-extrabold text-xl mb-4 text-white">Connect</h4>
                 <div className="mt-8 flex flex-col items-center"> 
                   <div className="flex space-x-4">
@@ -187,14 +187,15 @@ export default function Home() {
                     </a>
                   </div>
                 </div>
-                <p className="text-white text-base font-bold mt-4 bg-[#4e124d] p-3 rounded-lg  ">
-                  Get the latest updates from Perfect Hire
+                <p className="text-white text-base font-bold mt-4 bg-[#481A54] p-3 rounded-lg  ">
+                  Get the latest updates from MyPerfectHire.com
                 </p>
               </div>
             </div>
 
-            <div className="pt-8 border-t-2 border-yellow-300 mt-6 bg-[#4e124d] p-4 rounded-lg">
-              <p className="mb-4 text-white font-bold text-base">&copy; {new Date().getFullYear()} MyPerfectHire. All rights reserved.</p>
+            <div className="pt-8 border-t-2 border-yellow-300 mt-6 bg-[#481A54] p-4 rounded-lg">
+              <p className="mb-4 text-white font-bold text-base">&copy; {new Date().getFullYear()} MyPerfectHire.com
+               All rights reserved.</p>
               
             </div>
           </div>
