@@ -74,7 +74,7 @@ export default function HeroSection() {
                                 <div className="space-y-4">
                                     <Button
                                         onClick={handleStartClick}
-                                        className="bg-white text-[#481A54] hover:bg-gray-100 text-lg px-8 py-6 rounded-lg shadow-lg"
+                                        className="bg-[#e61c5c] text-white   text-lg px-8 py-6 rounded-lg shadow-lg"
                                     >
                                         Find My Perfect Hire →
                                     </Button>

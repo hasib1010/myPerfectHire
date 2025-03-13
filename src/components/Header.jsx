@@ -54,7 +54,7 @@ export default function Header() {
                         </a>
                         <a href="#contact">
                             <Button
-                                className="rounded-full px-4 py-1.5 xl:px-6 xl:py-2 text-sm xl:text-base font-medium bg-white text-[#481A54] hover:bg-gray-100"
+                                className="rounded-full px-4 py-1.5 xl:px-6 xl:py-2 text-sm xl:text-base font-medium bg-[#e61c5c] text-white hover:bg-gray-100"
                             >
                                 Contact Us
                             </Button>
