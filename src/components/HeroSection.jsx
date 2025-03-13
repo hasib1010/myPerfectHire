@@ -217,7 +217,7 @@ export default function HeroSection() {
                     </div>
 
                     {/* Right Content - Hero Image with Professional Profile */}
-                    <div className="relative  min-h-96">
+                    <div className="relative  h-fit">
                         <div className="absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full">
                             <motion.div
                                 className="relative"
