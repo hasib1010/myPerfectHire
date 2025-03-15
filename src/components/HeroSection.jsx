@@ -86,130 +86,143 @@ export default function HeroSection() {
                             ) : (
                                 <motion.form
                                     onSubmit={handleSubmit}
-                                    className="bg-white rounded-lg p-6 shadow-xl w-full max-w-md lg:max-w-xl"
+                                    className="rounded-lg bg-[#481a54]  p-1 shadow-xl w-full max-w-md lg:max-w-xl relative"
                                     initial={{ opacity: 0, scale: 0.9 }}
                                     animate={{ opacity: 1, scale: 1 }}
                                     transition={{ duration: 0.3 }}
                                 >
-                                    <h3 className="text-[#481A54] font-semibold text-xl mb-4">
-                                        Tell us About Your Perfect Hire:
-                                    </h3>
+                                     
+                                     <div className="relative z-10 bg-[#3d0e3d] p-6 rounded-xl">
+    {/* Colored Dots in a Horizontal Line */}
+    <div className="absolute top-2 left-1/2 -translate-x-1/2 flex space-x-2">
+        <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+        <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+        <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+        <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+    </div>
 
-                                    <div className="space-y-4">
-                                        <div>
-                                            <Label htmlFor="jobTitle" className="text-gray-700">Job Title:</Label>
-                                            <Input
-                                                id="jobTitle"
-                                                name="jobTitle"
-                                                value={formData.jobTitle}
-                                                onChange={handleChange}
-                                                required
-                                                className="mt-1 w-full"
-                                            />
-                                        </div>
+    <h3 className="text-white font-semibold text-xl mb-4 text-center">
+        Tell us About Your Perfect Hire:
+    </h3>
 
-                                        <div>
-                                            <Label htmlFor="location" className="text-gray-700">Location:</Label>
-                                            <Input
-                                                id="location"
-                                                name="location"
-                                                value={formData.location}
-                                                onChange={handleChange}
-                                                required
-                                                className="mt-1 w-full"
-                                            />
-                                        </div>
+    <div className="space-y-4">
+        <div>
+            <Label htmlFor="jobTitle" className="text-white">Job Title:</Label>
+            <Input
+                id="jobTitle"
+                name="jobTitle"
+                value={formData.jobTitle}
+                onChange={handleChange}
+                required
+                className="mt-1 w-full"
+            />
+        </div>
 
-                                        <div>
-                                            <Label htmlFor="comments" className="text-gray-700">Comments:</Label>
-                                            <Textarea
-                                                id="comments"
-                                                name="comments"
-                                                value={formData.comments}
-                                                onChange={handleChange}
-                                                rows={3}
-                                                className="mt-1 w-full"
-                                            />
-                                        </div>
+        <div>
+            <Label htmlFor="location" className="text-white">Location:</Label>
+            <Input
+                id="location"
+                name="location"
+                value={formData.location}
+                onChange={handleChange}
+                required
+                className="mt-1 w-full"
+            />
+        </div>
 
-                                        <h4 className="text-[#481A54] font-semibold pt-2">Your Contact Information:</h4>
+        <div>
+            <Label htmlFor="comments" className="text-white">Comments:</Label>
+            <Textarea
+                id="comments"
+                name="comments"
+                value={formData.comments}
+                onChange={handleChange}
+                rows={3}
+                className="mt-1 w-full"
+            />
+        </div>
 
-                                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                            <div>
-                                                <Label htmlFor="fullName" className="text-gray-700">Full Name:</Label>
-                                                <Input
-                                                    id="fullName"
-                                                    name="fullName"
-                                                    value={formData.fullName}
-                                                    onChange={handleChange}
-                                                    required
-                                                    className="mt-1 w-full"
-                                                />
-                                            </div>
+        <h4 className="text-white font-semibold pt-2">Your Contact Information:</h4>
 
-                                            <div>
-                                                <Label htmlFor="phoneNumber" className="text-gray-700">Phone Number:</Label>
-                                                <Input
-                                                    id="phoneNumber"
-                                                    name="phoneNumber"
-                                                    type="tel"
-                                                    value={formData.phoneNumber}
-                                                    onChange={handleChange}
-                                                    required
-                                                    className="mt-1 w-full"
-                                                />
-                                            </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+                <Label htmlFor="fullName" className="text-white">Full Name:</Label>
+                <Input
+                    id="fullName"
+                    name="fullName"
+                    value={formData.fullName}
+                    onChange={handleChange}
+                    required
+                    className="mt-1 w-full"
+                />
+            </div>
 
-                                            <div>
-                                                <Label htmlFor="workEmail" className="text-gray-700">Work Email:</Label>
-                                                <Input
-                                                    id="workEmail"
-                                                    name="workEmail"
-                                                    type="email"
-                                                    value={formData.workEmail}
-                                                    onChange={handleChange}
-                                                    required
-                                                    className="mt-1 w-full"
-                                                />
-                                            </div>
+            <div>
+                <Label htmlFor="phoneNumber" className="text-white">Phone Number:</Label>
+                <Input
+                    id="phoneNumber"
+                    name="phoneNumber"
+                    type="tel"
+                    value={formData.phoneNumber}
+                    onChange={handleChange}
+                    required
+                    className="mt-1 w-full"
+                />
+            </div>
 
-                                            <div>
-                                                <Label htmlFor="companyName" className="text-gray-700">Company Name:</Label>
-                                                <Input
-                                                    id="companyName"
-                                                    name="companyName"
-                                                    value={formData.companyName}
-                                                    onChange={handleChange}
-                                                    required
-                                                    className="mt-1 w-full"
-                                                />
-                                            </div>
-                                        </div>
+            <div>
+                <Label htmlFor="workEmail" className="text-white">Work Email:</Label>
+                <Input
+                    id="workEmail"
+                    name="workEmail"
+                    type="email"
+                    value={formData.workEmail}
+                    onChange={handleChange}
+                    required
+                    className="mt-1 w-full"
+                />
+            </div>
 
-                                        <div>
-                                            <Label htmlFor="title" className="text-gray-700">Your Title:</Label>
-                                            <Input
-                                                id="title"
-                                                name="title"
-                                                value={formData.title}
-                                                onChange={handleChange}
-                                                required
-                                                className="mt-1 w-full"
-                                            />
-                                        </div>
+            <div>
+                <Label htmlFor="companyName" className="text-white">Company Name:</Label>
+                <Input
+                    id="companyName"
+                    name="companyName"
+                    value={formData.companyName}
+                    onChange={handleChange}
+                    required
+                    className="mt-1 w-full"
+                />
+            </div>
+        </div>
 
-                                        <Button
-                                            type="submit"
-                                            className="w-full bg-[#481A54] hover:bg-[#3d0e3d] text-white mt-2"
-                                        >
-                                            Submit
-                                        </Button>
+        <div>
+            <Label htmlFor="title" className="text-white">Your Title:</Label>
+            <Input
+                id="title"
+                name="title"
+                value={formData.title}
+                onChange={handleChange}
+                required
+                className="mt-1 w-full"
+            />
+        </div>
 
-                                        <p className="text-xs text-gray-500 pt-2">
-                                            By clicking "Submit", you agree to our Terms of Service and Privacy Policy.
-                                        </p>
-                                    </div>
+        <Button
+            type="submit"
+            className="w-full bg-[#481A54] cursor-pointer hover:bg-[#3d0e3d] text-white mt-2"
+        >
+            Submit
+        </Button>
+
+        <p className="text-xs text-white text-center pt-2">
+            By clicking "Submit", you agree to our Terms of Service and Privacy Policy.
+        </p>
+    </div>
+</div>
+
                                 </motion.form>
+
                             )}
 
 
@@ -286,7 +299,7 @@ export default function HeroSection() {
                             </motion.div>
                         </div>
 
-                        <EnhancedProfileCard/>
+                        <EnhancedProfileCard />
                     </div>
                 </div>
             </div>
