@@ -1,85 +1,33 @@
-"use client";
-
-import { useEffect, useState, lazy, Suspense } from 'react';
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
-import { motion, AnimatePresence } from 'framer-motion';
+import AboutSection from "@/components/AboutSection";
+import ContactSection from "@/components/ContactSection";
+import HowItWorksSection from "@/components/HowItWorksSection";
+import ServicesSection from "@/components/ServicesSection";
 import Link from 'next/link';
 import Image from 'next/image';
 
-// Lazy load non-critical components
-const AboutSection = lazy(() => import("@/components/AboutSection"));
-const ContactSection = lazy(() => import("@/components/ContactSection"));
-const HowItWorksSection = lazy(() => import("@/components/HowItWorksSection"));
-const ServicesSection = lazy(() => import("@/components/ServicesSection"));
-
-// Pre-defined colors to avoid recreation
 const BRAND_COLORS = ['#481A54', '#e61c5c', '#38c7ef', '#2bb87c', '#ecb324'];
 
 export default function Home() {
-  const [currentColorIndex, setCurrentColorIndex] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    // Use requestAnimationFrame for smoother animation
-    let colorChangeId;
-    const updateColor = () => {
-      setCurrentColorIndex((prevIndex) => (prevIndex + 1) % BRAND_COLORS.length);
-      colorChangeId = setTimeout(updateColor, 5000);
-    };
-
-    colorChangeId = setTimeout(updateColor, 5000);
-
-    // Handle scroll visibility
-    const toggleVisibility = () => {
-      setIsVisible(window.pageYOffset > 500);
-    };
-
-    window.addEventListener('scroll', toggleVisibility, { passive: true });
-
-    return () => {
-      clearTimeout(colorChangeId);
-      window.removeEventListener('scroll', toggleVisibility);
-    };
-  }, []);
-
-  // Scroll to top handler
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  };
-
   return (
     <div className="min-h-screen relative">
-       
-
-      {/* Main content */}
       <div className="relative z-10">
         <Header />
-
         <main>
           <HeroSection />
-
-       
-            <div className="relative">
-              <ServicesSection />
-            </div> 
-
-          <Suspense fallback={<div className="h-64 flex items-center justify-center">Loading process...</div>}>
+          <div className="relative">
+            <ServicesSection />
+          </div>
+          <div className="relative">
             <HowItWorksSection />
-          </Suspense>
-
-          <Suspense fallback={<div className="h-64 flex items-center justify-center">Loading about...</div>}>
-            <div className="relative">
-              <AboutSection />
-            </div>
-          </Suspense>
-
-          <Suspense fallback={<div className="h-64 flex items-center justify-center">Loading contact...</div>}>
+          </div>
+          <div className="relative">
+            <AboutSection />
+          </div>
+          <div className="relative">
             <ContactSection />
-          </Suspense>
+          </div>
         </main>
         <footer
           className="relative overflow-hidden py-16 text-center"
@@ -89,81 +37,59 @@ export default function Home() {
             boxShadow: '0 -10px 25px -5px rgba(0,0,0,0.1)'
           }}
         >
-
-
-
           <div className="container mx-auto px-6 relative z-20">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-10 text-left">
               <div className="bg-[#481A54] p-4 rounded-lg">
                 <Link href={'/'}>
                   <div className="flex items-center mb-4">
-                    <div className=" ">
-                      <Image className='' src="/logo.png" alt="MyPerfectHire Logo" width={150} height={50} />
-                    </div>
+                    <Image src="/logo.png" alt="MyPerfectHire Logo" width={150} height={50} />
                   </div>
                 </Link>
                 <p className="text-white text-base font-bold">
                   Finding the absolute best talent for your organization since 2010.
                 </p>
               </div>
-
               <div className="bg-[#481A54] p-4 rounded-lg">
                 <h4 className="font-extrabold text-xl mb-4 text-white">Services</h4>
                 <ul className="space-y-3">
-                  <li>
-                    <a href="#services" className="text-white font-bold text-lg hover:text-white transition-all duration-200 flex items-center group">
-                      <span className="mr-2 bg-white text-[#481A54] rounded-full w-5 h-5 flex items-center justify-center text-sm group-hover:bg-[#e61c5c] group-hover:text-white transition-colors">→</span>
-                      Legal Recruiting
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#services" className="text-white font-bold text-lg hover:text-white transition-all duration-200 flex items-center group">
-                      <span className="mr-2 bg-white text-[#481A54] rounded-full w-5 h-5 flex items-center justify-center text-sm group-hover:bg-[#e61c5c] group-hover:text-white transition-colors">→</span>
-                      Retained Executive Search
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#services" className="text-white font-bold text-lg hover:text-white transition-all duration-200 flex items-center group">
-                      <span className="mr-2 bg-white text-[#481A54] rounded-full w-5 h-5 flex items-center justify-center text-sm group-hover:bg-[#e61c5c] group-hover:text-white transition-colors">→</span>
-                      Accounting & Finance Recruiting
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#services" className="text-white font-bold text-lg hover:text-white transition-all duration-200 flex items-center group">
-                      <span className="mr-2 bg-white text-[#481A54] rounded-full w-5 h-5 flex items-center justify-center text-sm group-hover:bg-[#e61c5c] group-hover:text-white transition-colors">→</span>
-                      Supply Chain and Logistics Recruiting
-                    </a>
-                  </li>
+                  <li><a href="#services" className="text-white font-bold text-lg hover:text-white transition-all duration-200 flex items-center group">
+                    <span className="mr-2 bg-white text-[#481A54] rounded-full w-5 h-5 flex items-center justify-center text-sm group-hover:bg-[#e61c5c] group-hover:text-white transition-colors">→</span>
+                    Legal Recruiting
+                  </a></li>
+                  <li><a href="#services" className="text-white font-bold text-lg hover:text-white transition-all duration-200 flex items-center group">
+                    <span className="mr-2 bg-white text-[#481A54] rounded-full w-5 h-5 flex items-center justify-center text-sm group-hover:bg-[#e61c5c] group-hover:text-white transition-colors">→</span>
+                    Retained Executive Search
+                  </a></li>
+                  <li><a href="#services" className="text-white font-bold text-lg hover:text-white transition-all duration-200 flex items-center group">
+                    <span className="mr-2 bg-white text-[#481A54] rounded-full w-5 h-5 flex items-center justify-center text-sm group-hover:bg-[#e61c5c] group-hover:text-white transition-colors">→</span>
+                    Accounting & Finance Recruiting
+                  </a></li>
+                  <li><a href="#services" className="text-white font-bold text-lg hover:text-white transition-all duration-200 flex items-center group">
+                    <span className="mr-2 bg-white text-[#481A54] rounded-full w-5 h-5 flex items-center justify-center text-sm group-hover:bg-[#e61c5c] group-hover:text-white transition-colors">→</span>
+                    Supply Chain and Logistics Recruiting
+                  </a></li>
                 </ul>
               </div>
-
               <div className="bg-[#481A54] p-4 rounded-lg">
                 <h4 className="font-extrabold text-xl mb-4 text-white">Company</h4>
                 <ul className="space-y-3">
-                  <li>
-                    <a href="#about" className="text-white font-bold text-lg hover:text-white transition-all duration-200 flex items-center group">
-                      <span className="mr-2 bg-white text-[#481A54] rounded-full w-5 h-5 flex items-center justify-center text-sm group-hover:bg-[#e61c5c] group-hover:text-white transition-colors">→</span>
-                      About Us
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#how-it-works" className="text-white font-bold text-lg hover:text-white transition-all duration-200 flex items-center group">
-                      <span className="mr-2 bg-white text-[#481A54] rounded-full w-5 h-5 flex items-center justify-center text-sm group-hover:bg-[#e61c5c] group-hover:text-white transition-colors">→</span>
-                      How It Works
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#contact" className="text-white font-bold text-lg hover:text-white transition-all duration-200 flex items-center group">
-                      <span className="mr-2 bg-white text-[#481A54] rounded-full w-5 h-5 flex items-center justify-center text-sm group-hover:bg-[#e61c5c] group-hover:text-white transition-colors">→</span>
-                      Contact
-                    </a>
-                  </li>
+                  <li><a href="#about" className="text-white font-bold text-lg hover:text-white transition-all duration-200 flex items-center group">
+                    <span className="mr-2 bg-white text-[#481A54] rounded-full w-5 h-5 flex items-center justify-center text-sm group-hover:bg-[#e61c5c] group-hover:text-white transition-colors">→</span>
+                    About Us
+                  </a></li>
+                  <li><a href="#how-it-works" className="text-white font-bold text-lg hover:text-white transition-all duration-200 flex items-center group">
+                    <span className="mr-2 bg-white text-[#481A54] rounded-full w-5 h-5 flex items-center justify-center text-sm group-hover:bg-[#e61c5c] group-hover:text-white transition-colors">→</span>
+                    How It Works
+                  </a></li>
+                  <li><a href="#contact" className="text-white font-bold text-lg hover:text-white transition-all duration-200 flex items-center group">
+                    <span className="mr-2 bg-white text-[#481A54] rounded-full w-5 h-5 flex items-center justify-center text-sm group-hover:bg-[#e61c5c] group-hover:text-white transition-colors">→</span>
+                    Contact
+                  </a></li>
                 </ul>
               </div>
-
               <div className="bg-[#481A54] p-4 rounded-lg">
                 <h4 className="font-extrabold text-xl mb-4 text-white">Connect</h4>
-                <div className="mt-8 flex flex-col items-center"> 
+                <div className="mt-8 flex flex-col items-center">
                   <div className="flex space-x-4">
                     <a href="#" className="w-10 h-10 rounded-full bg-[#e61c5c] flex items-center justify-center text-white transition-transform hover:scale-110">
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
@@ -186,26 +112,18 @@ export default function Home() {
                       </svg>
                     </a>
                   </div>
+                  <p className="text-white text-base font-bold mt-4 bg-[#481A54] p-3 rounded-lg">
+                    Get the latest updates from MyPerfectHire.com
+                  </p>
                 </div>
-                <p className="text-white text-base font-bold mt-4 bg-[#481A54] p-3 rounded-lg  ">
-                  Get the latest updates from MyPerfectHire.com
-                </p>
               </div>
             </div>
-
             <div className="pt-8 border-t-2 border-yellow-300 mt-6 bg-[#481A54] p-4 rounded-lg">
-              <p className="mb-4 text-white font-bold text-base">&copy; {new Date().getFullYear()} MyPerfectHire.com
-               All rights reserved.</p>
-              
+              <p className="mb-4 text-white font-bold text-base">© {new Date().getFullYear()} MyPerfectHire.com All rights reserved.</p>
             </div>
           </div>
- 
         </footer>
-
-
       </div>
-
-      
     </div>
   );
 }
