@@ -8,7 +8,7 @@ export default function EnhancedServicesSection() {
     {
       title: "Legal Recruiting",
       description: "We help our law firm partners hire the very best legal talent available through our rigorous process.",
-      icon: <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#e61c5c" stroke-width="1.6875" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z" /><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z" /><path d="M7 21h10" /><path d="M12 3v18" /><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2" /></svg>,
+      icon: <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#e61c5c" strokeWidth="1.6875" strokeLinecap="round" strokeLinejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z" /><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z" /><path d="M7 21h10" /><path d="M12 3v18" /><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2" /></svg>,
       color: "#e61c5c",
       bgColor: "#e61c5c10",
       delay: 0.05
@@ -16,7 +16,7 @@ export default function EnhancedServicesSection() {
     {
       title: "Executive Search",
       description: "The right executive hire can transform your business. We ensure you get the best person for the job.",
-      icon: <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#38c7ef" stroke-width="1.6875" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12h.01" /><path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" /><path d="M22 13a18.15 18.15 0 0 1-20 0" /><rect width="20" height="14" x="2" y="6" rx="2" /></svg>,
+      icon: <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#38c7ef" strokeWidth="1.6875" strokeLinecap="round" strokeLinejoin="round"><path d="M12 12h.01" /><path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" /><path d="M22 13a18.15 18.15 0 0 1-20 0" /><rect width="20" height="14" x="2" y="6" rx="2" /></svg>,
       color: "#38c7ef",
       bgColor: "#38c7ef10",
       delay: 0.1
@@ -24,7 +24,7 @@ export default function EnhancedServicesSection() {
     {
       title: "Accounting & Finance",
       description: "We identify top-tier professionals to support your business objectives in accounting and finance.",
-      icon: <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#2bb87c" stroke-width="1.6875" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="20" x="4" y="2" rx="2" /><line x1="8" x2="16" y1="6" y2="6" /><line x1="16" x2="16" y1="14" y2="18" /><path d="M16 10h.01" /><path d="M12 10h.01" /><path d="M8 10h.01" /><path d="M12 14h.01" /><path d="M8 14h.01" /><path d="M12 18h.01" /><path d="M8 18h.01" /></svg>,
+      icon: <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#2bb87c" strokeWidth="1.6875" strokeLinecap="round" strokeLinejoin="round"><rect width="16" height="20" x="4" y="2" rx="2" /><line x1="8" x2="16" y1="6" y2="6" /><line x1="16" x2="16" y1="14" y2="18" /><path d="M16 10h.01" /><path d="M12 10h.01" /><path d="M8 10h.01" /><path d="M12 14h.01" /><path d="M8 14h.01" /><path d="M12 18h.01" /><path d="M8 18h.01" /></svg>,
       color: "#2bb87c",
       bgColor: "#2bb87c10",
       delay: 0.15
@@ -32,7 +32,7 @@ export default function EnhancedServicesSection() {
     {
       title: "Supply Chain",
       description: "We pinpoint top talent with proven expertise in supply chain and logistics to keep your business ahead.",
-      icon: <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ecb324" stroke-width="1.6875" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2" /><path d="M15 18H9" /><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14" /><circle cx="17" cy="18" r="2" /><circle cx="7" cy="18" r="2" /></svg>,
+      icon: <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ecb324" strokeWidth="1.6875" strokeLinecap="round" strokeLinejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2" /><path d="M15 18H9" /><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14" /><circle cx="17" cy="18" r="2" /><circle cx="7" cy="18" r="2" /></svg>,
       color: "#ecb324",
       bgColor: "#ecb32410",
       delay: 0.2
@@ -117,7 +117,7 @@ export default function EnhancedServicesSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.3, delay: service.delay }} // Reduced duration from 0.5
-              whileHover={{ y: -5, scale: 1.02, transition: { duration: 0.15 } }} // Faster hover
+              whilehover={{ y: -5, scale: 1.02, transition: { duration: 0.15 } }} // Faster hover
             >
               <div
                 className="w-14 h-14 flex items-center justify-center rounded-full mb-4 mx-auto"
@@ -233,14 +233,14 @@ export default function EnhancedServicesSection() {
           <motion.a
             href="#contact"
             className="inline-block bg-[#481A54] hover:bg-[#3d0e3d] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-medium shadow-md group relative overflow-hidden"
-            whileHover={{ scale: 1.03 }}
+            whilehover={{ scale: 1.03 }}
             whileTap={{ scale: 0.97 }}
           >
             <span className="relative z-10">Schedule a Consultation</span>
             <motion.div
               className="absolute bottom-0 left-0 w-full h-0 bg-[#e61c5c]"
               initial={{ height: "0%" }}
-              whileHover={{ height: "100%" }}
+              whilehover={{ height: "100%" }}
               transition={{ duration: 0.2 }} // Reduced from 0.3
             />
           </motion.a>

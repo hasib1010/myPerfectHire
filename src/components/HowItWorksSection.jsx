@@ -39,7 +39,7 @@ crafting a competitive offer in your market.
 - Geographical considerations.
 - The Marketing Strategy for the position that will be used to market the position to candidates`,
       icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#e61c5c" stroke-width="1.6875" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rocket"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" /><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" /><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0" /><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" /></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#e61c5c" strokeWidth="1.6875" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-rocket"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" /><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" /><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0" /><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" /></svg>
       )
     },
     {
@@ -52,7 +52,7 @@ We will then systematically approach each candidate using a variety of methods.
 We will share weekly updates on the search.
 `,
       icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#38c7ef" stroke-width="1.6875" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#38c7ef" strokeWidth="1.6875" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-search"><circle cx="11" cy="11" r="8" /><path d="m21 21-4.3-4.3" /></svg>
       )
     },
     {
@@ -64,7 +64,7 @@ From this larger list, we will narrow it down to the best 3-5 candidates to subm
 interviews.
 `,
       icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#2bb87c" stroke-width="1.6875" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#2bb87c" strokeWidth="1.6875" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-users"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M22 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
       )
     },
 
@@ -73,7 +73,7 @@ interviews.
       title: "Successful Placement",
       description: "We help finalize the hiring process, including offer negotiation, and provide ongoing support to ensure your new hire is a perfect long-term fit. At the end of this process, you will be absolutely confident that you’re making your hire from the very best talent available in the market at this time",
       icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ecb324" stroke-width="1.6875" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-laptop-minimal-check"><path d="M2 20h20"/><path d="m9 10 2 2 4-4"/><rect x="3" y="4" width="18" height="12" rx="2"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ecb324" strokeWidth="1.6875" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-laptop-minimal-check"><path d="M2 20h20" /><path d="m9 10 2 2 4-4" /><rect x="3" y="4" width="18" height="12" rx="2" /></svg>
       )
     }
   ];
@@ -99,7 +99,7 @@ interviews.
 
   return (
     <section id="how-it-works" className="  bg-gray-50 relative overflow-hidden">
-     
+
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div
@@ -168,7 +168,7 @@ interviews.
                     initial={{ opacity: 0, y: 30 }}
                     animate={stepInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                     transition={{ duration: 0.5, delay: 0.1 }}
-                    whileHover={{
+                    whilehover={{
                       boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
                       y: -5,
                       transition: { duration: 0.2 }
@@ -196,7 +196,7 @@ interviews.
               initial={{ opacity: 0, y: 20 }}
               animate={ctaInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.5 }}
-              whileHover={{ boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)" }}
+              whilehover={{ boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)" }}
             >
               Find Your Perfect Hire Now
             </motion.a>

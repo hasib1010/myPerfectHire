@@ -20,29 +20,7 @@ const EnhancedProfileCard = () => {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  // Define 20 fixed dot positions with organic arrangement, adjusted for readability
-  const dotPositions = [
-    { top: '8%', left: '30%', color: '#e61c5c', size: 14 },  // Slightly off-top left
-    { top: '12%', left: '85%', color: '#38c7ef', size: 30 }, // Top-right, moved right
-    { top: '15%', left: '10%', color: '#ecb324', size: 20 },  // Upper-left, orange, shifted left
-    { top: '20%', left: '22%', color: '#2bb87c', size: 18 }, // Upper-left, moved down and right
-    { top: '25%', left: '88%', color: '#ecb324', size: 20 }, // Upper-right, small
-    { top: '15%', left: '70%', color: '#38c7ef', size: 44 }, // Upper-mid right, moved down
-    { top: '35%', left: '30%', color: '#38c7ef', size: 26 }, // Mid-leftish
-    { top: '42%', left: '92%', color: '#e61c5c', size: 20 }, // Mid-right
-    { top: '50%', left: '45%', color: '#2bb87c', size: 16 }, // Mid-centerish
-    { top: '70%', left: '15%', color: '#ecb324', size: 45 }, // Mid-left, tiny
-    { top: '60%', left: '70%', color: '#2bb87c', size: 32 }, // Mid-rightish, huge
-    { top: '65%', left: '35%', color: '#38c7ef', size: 22 }, // Lower-mid left
-    { top: '68%', left: '82%', color: '#e61c5c', size: 18 }, // Lower-mid right
-    { top: '72%', left: '25%', color: '#e61c5c', size: 24 }, // Lower-left
-    { top: '78%', left: '85%', color: '#38c7ef', size: 16 }, // Lower-right
-    { top: '82%', left: '60%', color: '#ecb324', size: 14 }, // Lower-center
-    { top: '85%', left: '12%', color: '#2bb87c', size: 28 }, // Bottom-left
-    { top: '88%', left: '40%', color: '#ecb324', size: 26 }, // Bottom-leftish
-    { top: '90%', left: '20%', color: '#e61c5c', size: 22 }, // Bottom-left
-    { top: '94%', left: '65%', color: '#2bb87c', size: 20 }, // Bottom-rightish
-  ];
+ 
 
   return (
     <motion.div
@@ -53,23 +31,7 @@ const EnhancedProfileCard = () => {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      {/* Fixed Dots */}
-      <div className="absolute inset-0 -z-10">
-        {dotPositions.map((dot, index) => (
-          <div
-            key={index}
-            className="absolute rounded-full"
-            style={{
-              top: dot.top,
-              left: dot.left,
-              width: `${dot.size}px`,
-              height: `${dot.size}px`,
-              backgroundColor: dot.color,
-              opacity: 0.8,
-            }}
-          />
-        ))}
-      </div>
+      
 
       {isMobile ? (
         <>
@@ -170,7 +132,7 @@ const EnhancedProfileCard = () => {
                         animate={{ scale: 1 }}
                         transition={{ duration: 0.3, delay: 0.4 + index * 0.05 }}
                         style={{ color: starColor }}
-                        whileHover={{ scale: 1.2 }}
+                        whilehover={{ scale: 1.2 }}
                       >
                         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3 .921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784 .57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81 .588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                       </motion.svg>
