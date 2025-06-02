@@ -41,8 +41,8 @@ export default function HeroSection() {
   // Define 7 dot positions: 3 lines (2-3-2), using all 4 colors
   const heroDotPositions = [
     // Top line (10%-15%, 2 dots)
-    { top: '15%', left: '20%', color: '#38c7ef', size: 40 },  // Cyan
-    { top: '15%', right: '10%', color: '#e61c5c', size: 60 }, // Red
+    { top: '22%', left: '20%', color: '#38c7ef', size: 40 },  // Cyan
+    { top: '22%', right: '10%', color: '#e61c5c', size: 60 }, // Red
 
     // Middle line (40%-50%, 3 dots)
     { top: '45%', left: '8%', color: '#ecb324', size: 50 },    // Orange
@@ -60,26 +60,29 @@ export default function HeroSection() {
       className="pt-28 pb-20 lg:pt-36 lg:pb-32 bg-[#481A54] relative min-h-[600px]"
     >
       {/* Parent div for dots with fixed height */}
-      <div className="absolute inset-0 h-[600px] w-full">
+      {/* Dots container with mobile-friendly logic */}
+      <div className="absolute inset-0 h-[600px] w-full z-0">
         {heroDotPositions.map((dot, index) => (
           <div
             key={index}
-            className="absolute rounded-full"
+            className={`absolute rounded-full`}
             style={{
               top: dot.top,
               left: dot.left || 'auto',
               right: dot.right || 'auto',
-              width: `${dot.size}px`,
-              height: `${dot.size}px`,
+              width: `calc(${dot.size}px * 0.6)`, // reduce size on all screens
+              height: `calc(${dot.size}px * 0.6)`,
               backgroundColor: dot.color,
-              opacity: 0.7,
+              opacity: 0.5,
             }}
           />
+
         ))}
       </div>
 
+
       {/* Content container with vertical scrolling */}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 h-full  ">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 h-full backdrop-blur-md lg:backdrop-blur-none  ">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8">
           <div className="text-white max-w-2xl mx-auto lg:mx-0">
             <motion.h1
