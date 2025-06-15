@@ -76,10 +76,8 @@ export default function HeroSection() {
               opacity: 0.5,
             }}
           />
-
         ))}
       </div>
-
 
       {/* Content container with vertical scrolling */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 h-full backdrop-blur-md lg:backdrop-blur-none  ">
@@ -99,7 +97,7 @@ export default function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
-              With Our Human Driven, AI Assisted Process, We Don’t Just Fill Positions, We Find Your Perfect Hire!
+              Our unique, retained flat-fee model brings you only currently employed proven operators while saving you 50-70% compared to traditional recruiting firms.
             </motion.p>
             <motion.div
               className="space-y-8"
@@ -116,7 +114,7 @@ export default function HeroSection() {
                     Find My Perfect Hire →
                   </Button>
                   <p className="text-sm opacity-80 pt-2">
-                    Tell us what you're looking for and we'll connect you with top talent.
+                    Tell us what you’re looking for and we will share our plan to get you your perfect hire.
                   </p>
                 </div>
               ) : (
